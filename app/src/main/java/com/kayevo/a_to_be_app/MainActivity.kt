@@ -19,7 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.kayevo.a_to_be_app.ui.home.HomeScreen
 import com.kayevo.a_to_be_app.ui.navigation.Screen
-import com.kayevo.a_to_be_app.ui.products.FormScreen
+import com.kayevo.a_to_be_app.ui.account.CreateAccountScreen
 import com.kayevo.a_to_be_app.ui.products.ProductsScreen
 import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
 
@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                         NavHost(navController = navController, startDestination = Screen.HOME.toString()) {
                             composable(Screen.HOME.toString()) { HomeScreen(navController) }
                             composable(Screen.PRODUCTS.toString()) { ProductsScreen(navController) }
-                            composable(Screen.FORM.toString()) { FormScreen(navController) }
+                            composable(Screen.FORM.toString()) { CreateAccountScreen(navController) }
                         }
                     }
                 }
