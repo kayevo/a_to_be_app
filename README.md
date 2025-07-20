@@ -11,15 +11,21 @@ run: ```git clone git@github.com:kayevo/a_to_be_app.git``` to install the projec
 ## Build:
 run: ```./gradlew assembleDebug``` in root directory to build the project.
 
-## Run:
-run: ```./gradlew installDebug``` in root directory to install the app in your emulator or connceted device.
+## Execute:
+run: ```./gradlew installDebug``` in root directory to install the app in your emulator or connected device.
+
+## Run unit tests:
+run: ```./gradlew testDebugUnitTest``` in root directory to run all the unit tests.
 
 ## Implemented features:
 -
 
 ## Libraries used:
-- Jetpack compose: UI creation.
+- Jetpack compose: create UI.
 - Navigation: navigate between screens.
+- Koin: add dependency injection.
+- Coroutines: create Flows and asynchronous operations.
+- JUnit: unit tests.
 
 ## Technical decisions:
 - At feature 1, local listing with pagination, the size 194 of the list dont justify the use of pagination in this scenario where the data need to be persisted once.
