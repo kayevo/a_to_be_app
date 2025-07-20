@@ -25,8 +25,8 @@ import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
 
 @Composable
 fun ProductsScreen(navController: NavHostController) {
-    val mockItems = mutableListOf<String>("Apple", "Banana", "Cherry")
-    for(element in 0..50) mockItems.add("Apple")
+    val mockItems = mutableListOf<String>()
+    for(element in 0..50) mockItems.add("Item name")
 
     Column(
         verticalArrangement = Arrangement.Top,

@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.kayevo.a_to_be_app.ui.navigation.Screen
@@ -40,7 +41,7 @@ fun HomeScreen(navController: NavHostController) {
             .fillMaxSize()
             .padding(horizontal = 16.dp)
     ) {
-        Text(text = "Home")
+        Text(text = "Home", fontSize = 22.sp)
 
         Button(
             onClick = goToProductList,
@@ -55,7 +56,7 @@ fun HomeScreen(navController: NavHostController) {
             content = { Text("Form") },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 50.dp),
+                .padding(top = 16.dp),
         )
     }
 }

@@ -66,7 +66,7 @@ fun CreateAccountContent(
             text = "Create account",
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 16.dp),
+                .padding(bottom = 50.dp),
             textAlign = TextAlign.Center,
             fontSize = 22.sp
         )
