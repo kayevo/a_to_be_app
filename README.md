@@ -18,7 +18,8 @@ run: ```./gradlew installDebug``` in root directory to install the app in your e
 -
 
 ## Libraries used:
--
+- Jetpack compose: UI creation.
+- Navigation: navigate between screens.
 
 ## Technical decisions:
 - At feature 1, local listing with pagination, the size 194 of the list dont justify the use of pagination in this scenario where the data need to be persisted once.
