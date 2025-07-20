@@ -1,4 +1,4 @@
-package com.kayevo.a_to_be_app.ui.home
+package com.kayevo.a_to_be_app.ui.products
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,59 +10,49 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
-import androidx.compose.material3.Button
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.kayevo.a_to_be_app.ui.navigation.Screen
 import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
 
 @Composable
-fun HomeScreen(navController: NavHostController) {
-    val goToProductList: () -> Unit = {
-        navController.navigate(Screen.PRODUCTS.toString())
-    }
-
-    val goToForm: () -> Unit = {
-        navController.navigate(Screen.FORM.toString())
-    }
+fun ProductsScreen(navController: NavHostController) {
+    val mockItems = mutableListOf<String>("Apple", "Banana", "Cherry")
+    for(element in 0..50) mockItems.add("Apple")
 
     Column(
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top,
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 16.dp)
     ) {
-        Text(text = "Home")
-
-        Button(
-            onClick = goToProductList,
-            content = { Text("Product list") },
+        Text(
+            text = "Products",
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 50.dp),
+                .padding(bottom = 16.dp),
+            textAlign = TextAlign.Center,
+            fontSize = 22.sp
         )
-
-        Button(
-            onClick = goToForm,
-            content = { Text("Form") },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 50.dp),
-        )
+        LazyColumn {
+            items(count = mockItems.size) { index ->
+                Text(text = "${index + 1}. ${mockItems[index]}")
+            }
+        }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview() {
+fun ProductsScreenPreview() {
     A_to_be_AppTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -78,7 +68,7 @@ fun HomeScreenPreview() {
                     .padding(bottom = 32.dp)
                     .padding(top = 16.dp),
             ) {
-                HomeScreen(rememberNavController())
+                ProductsScreen(rememberNavController())
             }
         }
     }
