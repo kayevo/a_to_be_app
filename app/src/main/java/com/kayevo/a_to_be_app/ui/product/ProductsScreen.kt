@@ -1,4 +1,4 @@
-package com.kayevo.a_to_be_app.ui.products
+package com.kayevo.a_to_be_app.ui.product
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
