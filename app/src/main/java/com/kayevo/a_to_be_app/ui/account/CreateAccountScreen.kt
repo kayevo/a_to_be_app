@@ -29,7 +29,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun CreateAccountScreen(navController: NavHostController) {
-    val viewModel: CreateAccountViewModel = koinViewModel()
+    val viewModel = koinViewModel<CreateAccountViewModel>()
     val email = viewModel.email.collectAsState()
     val name = viewModel.email.collectAsState()
     val changeEmail = viewModel::changeEmail
