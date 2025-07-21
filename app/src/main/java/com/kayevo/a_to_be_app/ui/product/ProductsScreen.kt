@@ -14,20 +14,26 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun ProductsScreen(navController: NavHostController) {
-    val mockItems = mutableListOf<String>()
-    for(element in 0..50) mockItems.add("Item name")
+    val viewModel = koinViewModel<ProductsViewModel>()
+    val products = viewModel.products.collectAsState()
 
+    ProductsContent(products.value)
+}
+
+@Composable
+fun ProductsContent(products: List<String>) {
     Column(
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
@@ -43,8 +49,8 @@ fun ProductsScreen(navController: NavHostController) {
             fontSize = 22.sp
         )
         LazyColumn {
-            items(count = mockItems.size) { index ->
-                Text(text = "${index + 1}. ${mockItems[index]}")
+            items(count = products.size) { index ->
+                Text(text = "${index + 1}. ${products[index]}")
             }
         }
     }
@@ -68,7 +74,10 @@ fun ProductsScreenPreview() {
                     .padding(bottom = 32.dp)
                     .padding(top = 16.dp),
             ) {
-                ProductsScreen(rememberNavController())
+                val mockedItems = mutableListOf<String>()
+                for(element in 0..50) mockedItems.add("Item name")
+
+                ProductsContent(mockedItems)
             }
         }
     }
