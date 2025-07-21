@@ -26,6 +26,8 @@ run: ```./gradlew testDebugUnitTest``` in root directory to run all the unit tes
 - Koin: add dependency injection.
 - Coroutines: create Flows and asynchronous operations.
 - JUnit: unit tests.
+- Retrofit: communicate with APIs.
+- Gson: serialize and deserialize Json objects.
 
 ## Technical decisions:
 - At feature 1, local listing with pagination, the size 194 of the list dont justify the use of pagination in this scenario where the data need to be persisted once.
