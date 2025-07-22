@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.kayevo.a_to_be_app.domain.product.Product
 import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
 import org.koin.androidx.compose.koinViewModel
 
@@ -33,7 +34,7 @@ fun ProductsScreen(navController: NavHostController) {
 }
 
 @Composable
-fun ProductsContent(products: List<String>) {
+fun ProductsContent(products: List<Product>) {
     Column(
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
@@ -74,8 +75,8 @@ fun ProductsScreenPreview() {
                     .padding(bottom = 32.dp)
                     .padding(top = 16.dp),
             ) {
-                val mockedItems = mutableListOf<String>()
-                for(element in 0..50) mockedItems.add("Item name")
+                val mockedItems = mutableListOf<Product>()
+                for(element in 0..50) mockedItems.add(Product(id = 0, title = "Abc"))
 
                 ProductsContent(mockedItems)
             }
