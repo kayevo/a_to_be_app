@@ -1,4 +1,4 @@
-package com.kayevo.a_to_be_app.ui.product
+package com.kayevo.a_to_be_app.view.ui.product
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

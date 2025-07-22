@@ -1,6 +1,5 @@
-package com.kayevo.a_to_be_app.ui.theme
+package com.kayevo.a_to_be_app.view.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

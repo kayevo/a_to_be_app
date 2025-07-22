@@ -1,4 +1,4 @@
-package com.kayevo.a_to_be_app.ui.home
+package com.kayevo.a_to_be_app.view.ui.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.kayevo.a_to_be_app.ui.navigation.Screen
-import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
+import com.kayevo.a_to_be_app.view.navigation.Screen
+import com.kayevo.a_to_be_app.view.theme.A_to_be_AppTheme
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
