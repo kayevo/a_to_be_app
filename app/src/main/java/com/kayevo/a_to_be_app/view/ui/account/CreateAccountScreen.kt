@@ -1,4 +1,4 @@
-package com.kayevo.a_to_be_app.ui.account
+package com.kayevo.a_to_be_app.view.ui.account
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
+import com.kayevo.a_to_be_app.view.theme.A_to_be_AppTheme
 import org.koin.androidx.compose.koinViewModel
 
 @Composable

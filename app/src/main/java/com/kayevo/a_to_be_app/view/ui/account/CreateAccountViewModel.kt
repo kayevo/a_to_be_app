@@ -1,4 +1,4 @@
-package com.kayevo.a_to_be_app.ui.account
+package com.kayevo.a_to_be_app.view.ui.account
 
 import androidx.lifecycle.ViewModel
 import com.kayevo.a_to_be_app.domain.account.isValidEmail

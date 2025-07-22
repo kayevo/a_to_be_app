@@ -17,11 +17,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.kayevo.a_to_be_app.ui.home.HomeScreen
-import com.kayevo.a_to_be_app.ui.navigation.Screen
-import com.kayevo.a_to_be_app.ui.account.CreateAccountScreen
-import com.kayevo.a_to_be_app.ui.product.ProductsScreen
-import com.kayevo.a_to_be_app.ui.theme.A_to_be_AppTheme
+import com.kayevo.a_to_be_app.view.ui.home.HomeScreen
+import com.kayevo.a_to_be_app.view.navigation.Screen
+import com.kayevo.a_to_be_app.view.ui.account.CreateAccountScreen
+import com.kayevo.a_to_be_app.view.ui.product.ProductsScreen
+import com.kayevo.a_to_be_app.view.theme.A_to_be_AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
