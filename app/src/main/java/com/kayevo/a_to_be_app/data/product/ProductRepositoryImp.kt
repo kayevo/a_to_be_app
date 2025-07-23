@@ -21,5 +21,15 @@ class ProductRepositoryImp(private val productDataSource: ProductDataSource): Pr
             emit(ServiceResult.Error)
         }
     }.catch { _ -> emit(ServiceResult.Error) }
+
+    override fun getAreProductsSaved(): Flow<ServiceResult<Boolean>> = flow<ServiceResult<Boolean>> {
+        emit(ServiceResult.Loading)
+        val areProductsSaved = productDataSource.getAreProductsSaved()
+        emit(ServiceResult.Success(areProductsSaved))
+    }.catch { _ -> emit(ServiceResult.Error) }
+
+    override suspend fun setAreProductsSaved(areSaved: Boolean){
+        productDataSource.setAreProductsSaved(areSaved)
+    }
 }
 

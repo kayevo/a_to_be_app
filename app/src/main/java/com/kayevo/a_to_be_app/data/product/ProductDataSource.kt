@@ -4,4 +4,6 @@ import retrofit2.Response
 
 interface ProductDataSource {
     suspend fun getProducts(): Response<ProductsResponse>
+    suspend fun getAreProductsSaved(): Boolean
+    suspend fun setAreProductsSaved(areSaved: Boolean)
 }
