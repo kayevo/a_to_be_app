@@ -18,7 +18,7 @@ run: ```./gradlew installDebug``` in root directory to install the app in your e
 run: ```./gradlew testDebugUnitTest``` in root directory to run all the unit tests.
 
 ## Implemented features:
--
+- Feature 4, form validation.
 
 ## Libraries used:
 - Jetpack compose: create UI.
